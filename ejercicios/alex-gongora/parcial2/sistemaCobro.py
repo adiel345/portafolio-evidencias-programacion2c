@@ -110,6 +110,6 @@ def main():
     
     imprimir_ticket(producto, subtotal_con_descuento, iva, total_final)
 
-# Punto de entrada del programa
+# Punto de entrada del programa 24
 if __name__ == "__main__":
     main()
