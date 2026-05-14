@@ -31,4 +31,4 @@ class Persona:
         print(f"Año de nacimiento: {objPersona.calcularNacimiento()}")
 
     if __name__ == '__main__':
-        main()
+        main()  
