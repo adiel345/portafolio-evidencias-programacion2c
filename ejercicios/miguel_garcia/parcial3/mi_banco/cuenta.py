@@ -40,9 +40,3 @@ class Cuenta:
         Args: cantidad (float): La cantidad a retirar. Debe ser un valor positivo y no puede exceder el saldo.
         Returns: True si el retiro fue exitoso, False si la cantidad es inválida o excede el saldo.
         """
-
-def main():
-    pass
-
-if __name__ == "__main__":
-    main()
