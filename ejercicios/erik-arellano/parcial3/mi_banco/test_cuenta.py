@@ -34,5 +34,18 @@ class TestCuenta(unittest.TestCase):
     # ---------------- PRUEBAS DE RETIRO ------------------------
 
     #1. test para validar retiro con cantidad 0
-    #2. test para validar retiro con cantidad negativa 
-    #3. test para validar retiro con cantidad mayor al saldo
+    def test_retirar_cantidad_cero(self):
+        result = self.cuenta.retiro(0)
+        self.assertFalse(result)
+        self.assertEqual(self.cuenta.saldo, 0, "No se puede retirar cero")
+    #2. test para validar retiro con cadef test_retirar_cantidad_cero(self):
+    def test_retirar_cantidad_negativa(self):
+        result = self.cuenta.retiro(-50)
+        self.assertFalse(result)
+        self.assertEqual(self.cuenta.saldo, 0, "No se puede retirar montos negativos")
+    #3. test para validar retirodef test_retirar_cantidad_negativa(self):
+    def test_retirar_mas_del_saldo(self):
+        result = self.cuenta.retiro(1000)
+        self.assertFalse(result)
+        self.assertEqual(self.cuenta.saldo, 0, "No se puede retirar más de lo que hay en la cuenta")
+        

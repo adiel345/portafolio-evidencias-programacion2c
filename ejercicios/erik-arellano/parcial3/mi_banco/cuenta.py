@@ -1,164 +1,75 @@
-class Cuenta:
+class cuenta:
+  """
+  Presetacion de una cuenta bancaria
+   Atributos:
+      cliente: nombre del cliente.
+      cuenta: numero de cuenta.
+      saldo: saldo actual de la cuenta."""
 
-    def _init_(self, cliente, cuenta, saldo = 0):
-        self.cliente = cliente
-        self.cuenta = cuenta
-        self.saldo = saldo
 
-    def deposito(self, cantidad):
-        if cantidad > 0:
-            self.saldo += cantidad
-            return True
-        return False
-    
-    def retirar(self, cantidad):
-        if cantidad > 0 and cantidad <= self.saldo:
-            self.saldo -= cantidad
-            return True
-        return False
-    
-def main():
-    pass
 
-if __name__ == "_main_":
-    main()
-    #Atributos: cliente, cuenta, saldo
+
 def __init__(self, cliente, cuenta, saldo = 0):
- 
-     self.cliente = cliente
-     self.cuenta = cuenta
-     self.saldo = saldo
-
-#Atributos: cliente, cuenta, saldo
-def __init__(self, cliente, cuenta, saldo = 0):
- 
-     self.cliente = cliente
-     self.cuenta = cuenta
-     self.saldo = saldo
-
-
-"""
-Son los metodos para realizar operaciones en la cuenta, como depositar y retirar dinero.
-El metodo deposito permite agregar dinero a la cuenta, mientras que el metodo retirar permite sacar dinero
-"""
-
-
-"""
-El metodo deposito permite agregar dinero a la cuenta, pero solo si la cantidad a depositar es positiva.
-Si se cumple esta condición, se suma la cantidad al saldo actual de la cuenta y se devuelve True para indicar que el deposito fue exitoso. Si no se cumple la condición, se devuelve False para indicar que el deposito no se pudo realizar.
-"""
+      """
+      Inicializa una nueva cuenta bancaria.
+    
+      Args:
+          cliente: nombre del cliente.
+          cuenta: numero de cuenta.
+          saldo: saldo inicial de la cuenta. (por defecto 0)
+      """
+      self.cliente = cliente
+      self.cuenta = cuenta
+      self.saldo = saldo
 
 
 
 
 def deposito(self, cantidad):
-     #El deposito solo se puede realizar si la cantidad es positiva
-     if cantidad > 0:
-         self.saldo += cantidad
-         #Si el deposito es exitoso, se devuelve verdadero (True), de lo contrario se devuelve Falso (False)
-         return True
-     return False
-
-"""
-El metodo retirar permite sacar dinero de la cuenta, pero solo si la cantidad a retirar es positiva y no excede
-   el saldo disponible en la cuenta. Si se cumplen estas condiciones, se resta la cantidad del saldo y se devuelve
-   True para indicar que el retiro fue exitoso. Si no se cumplen las condiciones, se devuelve False para indicar que el retiro no se pudo realizar.
-"""
+      """
+      Realiza un deposito en la cuenta.
 
 
 
 
-def retirar(self, cantidad):
-     if cantidad>0 and cantidad <= self.saldo:
-         self.saldo -= cantidad
-         return True
-     return False
+      Args:
+          cantidad:(float) ingresa la cantidad a depositar. Debe ser un valor positivo.
 
 
 
 
+      Returns:
+          bool:True si el deposito fue exitoso.
+          bool:False si la cantidad es negativa.
 
 
 
 
+      """
+      if cantidad > 0:
+          self.saldo += cantidad
+          return True
+      return False
+def retiro(self,cantidad):
+      """
+      Realiza un retiro de la cuenta.
+    
+      Args:
+          cantidad:(float) ingresa la cantidad a retirar
+    
+      Returns:
+          bool:True si el retiro fue exitoso.
+          bool:false si el saldo es isuficiente o si la cantidad es cero.
+      """
+      if cantidad > 0 and cantidad <= self.saldo:
+          self.saldo -= cantidad
+          return True
+      return False
 def main():
   pass
-if __name__=="__main__":
+
+
+
+
+if __name__ == "__main__":
   main()
-
-
-
-
-
-
-#Atributos: cliente, cuenta, saldo
-def __init__(self, cliente, cuenta, saldo = 0):
- 
-     self.cliente = cliente
-     self.cuenta = cuenta
-     self.saldo = saldo
-
-"""
-Son los metodos para realizar operaciones en la cuenta, como depositar y retirar dinero.
-El metodo deposito permite agregar dinero a la cuenta, mientras que el metodo retirar permite sacar dinero
-"""
-
-
-"""
-El metodo deposito permite agregar dinero a la cuenta, pero solo si la cantidad a depositar es positiva.
-Si se cumple esta condición, se suma la cantidad al saldo actual de la cuenta y se devuelve True para indicar que el deposito fue exitoso. Si no se cumple la condición, se devuelve False para indicar que el deposito no se pudo realizar.
-"""
-
-
-
-
-def deposito(self, cantidad):
-     #El deposito solo se puede realizar si la cantidad es positiva
-     if cantidad > 0:
-         self.saldo += cantidad
-         #Si el deposito es exitoso, se devuelve verdadero (True), de lo contrario se devuelve Falso (False)
-         return True
-     return False
-
-
-"""
-El metodo retirar permite sacar dinero de la cuenta, pero solo si la cantidad a retirar es positiva y no excede
-   el saldo disponible en la cuenta. Si se cumplen estas condiciones, se resta la cantidad del saldo y se devuelve
-   True para indicar que el retiro fue exitoso. Si no se cumplen las condiciones, se devuelve False para indicar que el retiro no se pudo realizar.
-"""
-
-
-
-
-def retirar(self, cantidad):
-     if cantidad>0 and cantidad <= self.saldo:
-         self.saldo -= cantidad
-         return True
-     return False
-
-
-def main():
-  pass
-if __name__=="__main__":
-  main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
