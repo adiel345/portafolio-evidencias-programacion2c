@@ -49,10 +49,3 @@ class Cuenta:
             self.saldo -= cantidad
             return True
         return False
-    
-def main():
-    """Funcion principal(pendiente de implementacion si se requiere ejecucion directa)"""
-    pass
-
-if __name__ == "__main__":
-      main()
